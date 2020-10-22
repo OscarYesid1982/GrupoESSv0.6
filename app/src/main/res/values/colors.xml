@@ -8,4 +8,7 @@
 
     <color name="toolbarIconColor">#795548</color>
     <color name="colorBackgCard">#63E1E1DD</color>
+    <!-- Colors Slider -->
+    <color name="colorTextPrimary">#212121</color>
+    <color name="colorTextSecondary">#757575</color>
 </resources>

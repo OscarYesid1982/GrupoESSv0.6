@@ -7,15 +7,18 @@ import android.view.Menu
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import androidx.viewpager2.widget.ViewPager2
 import com.getbase.floatingactionbutton.FloatingActionsMenu
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import com.grupoess.grupoessv05.adapters.IntroSliderAdapter
 
 import com.grupoess.grupoessv05.adapters.LanguageAdaptersCategorias
 import com.grupoess.grupoessv05.model.Categorias_object
+import com.grupoess.grupoessv05.model.IntroSlide
 import com.grupoess.grupoessv05.variables.Seleccion
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -30,15 +33,57 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
     var fabEliminar: FloatingActionButton? = null
     var fabConfirmar: FloatingActionButton? = null
 
+    //Funciones Slider Splash
+    private val introSliderAdapter = IntroSliderAdapter(
+        listOf(
+            IntroSlide(
+                "Imagen Slider 1",
+                "Descripción de la primera imagen como Slider",
+                R.drawable.slider1
+            ),
+            IntroSlide(
+                "Imagen Slider 2",
+                "Descripción de la segunda imagen como Slider",
+                R.drawable.slider2
+            ),
+            IntroSlide(
+                "Imagen Slider 3",
+                "Descripción de la tercera imagen como Slider",
+                R.drawable.slider3
+            ),
+            IntroSlide(
+                "Imagen Slider 4",
+                "Descripción de la cuarta imagen como Slider",
+                R.drawable.slider4
+            )
+        )
+    )
+    //Pate de Splash Slider
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         setSupportActionBar(findViewById(R.id.toolbar))
+/*
+        introSliderViewPager.adapter = introSliderAdapter
+        setupIndicators()
+        setCurrentIndicator(0)
+        introSliderViewPager.registerOnPageChangeCallback(object:
+            ViewPager2.OnPageChangeCallback() {
+
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                setCurrentIndicator(position)
+            }
+
+        }
+        )
+
+ */
 
         idFabCarrito.setOnClickListener {
-            // val i = Intent(this, registrarse::class.java)
-            // startActivity(i)
+            val i = Intent(this, registrarse::class.java)
+            startActivity(i)
             Toast.makeText(this, "Prueba fab Carrito", Toast.LENGTH_SHORT).show()
         }
 
