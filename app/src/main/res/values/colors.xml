@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff7043</color>
+    <color name="colorPrimaryDark">#ff7043</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorBackgroundSelected">#FFFFFF</color>
+
+    <color name="toolbarIconColor">#795548</color>
+    <color name="colorBackgCard">#63E1E1DD</color>
+</resources>

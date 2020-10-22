@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".crear_producto">
+
+    <ImageView
+        android:id="@+id/id_producto_imagen"
+        android:layout_width="133dp"
+        android:layout_height="153dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_producto_url"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/categoria_default" />
+
+    <EditText
+        android:id="@+id/id_producto_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="Url Imagen Producto"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/id_producto_nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/id_producto_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre Producto"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/id_producto_activo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:checked="true"
+        android:text="Activo"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_producto_nombre" />
+
+    <Button
+        android:id="@+id/id_producto_boton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="#4F6082"
+        android:padding="15dp"
+        android:text="Continuar"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_producto_activo" />
+
+    <TextView
+        android:id="@+id/id_producto_sub_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Categortia"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/id_producto_categorias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/id_producto_categorias"
+        android:layout_width="212dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="32dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/id_producto_nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/id_producto_descripcion"
+        android:layout_width="207dp"
+        android:layout_height="122dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Descripción del producto"
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_producto_url" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/grupoFab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="-8dp"
+        app:fab_addButtonColorNormal="@color/colorAccent"
+        app:fab_addButtonColorPressed="@color/colorAccent"
+        tools:ignore="MissingConstraints">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/idFabCarrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimaryDark"
+            app:fab_icon="@drawable/shopping_cart"
+            app:fab_title="Carrito"
+            app:fab_size="mini" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/idFabHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimaryDark"
+            app:fab_icon="@drawable/home"
+            app:fab_title="Confirmar"
+            app:fab_size="mini" />
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/idFabMiPerfil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_colorNormal="@color/colorPrimaryDark"
+            app:fab_icon="@drawable/perfil"
+            app:fab_title="xxxxxxxxx"
+            app:fab_size="mini" />
+
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+</RelativeLayout>
